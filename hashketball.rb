@@ -1,5 +1,5 @@
 # Write your code below game_hash
-
+require 'pry'
 def game_hash
   {
     home: {
@@ -143,6 +143,7 @@ def shoe_size(player)
       team_stats[:players].each do |players|
           if players[:player_name] == player
               return players[:shoe]
+              binding.pry
           end
       end
   end
@@ -200,6 +201,7 @@ def big_shoe_rebounds
           if stats[:shoe] > biggest_shoe
               biggest_shoe = stats[:shoe]
               rebounds = stats[:rebounds]
+              binding.pry
           end
       end
   end
